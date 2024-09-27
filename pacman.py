@@ -41,7 +41,17 @@ class PacMan:
         self.screen.blit(rotated_image, (screen_x, screen_y))
 
     def move(self):
-        if self.direction:
+        if self.direction :
+            dx, dy = self.direction
+            new_x, new_y = self.x + dx, self.y + dy
+            if self.board[new_y][new_x] == 0:
+                self.x, self.y = new_x, new_y
+                grid_x, grid_y = grid_to_screen(grid_pos=[self.x, self.y], tile_size=[self.size_grid, self.size_grid])
+                self.rect.topleft = grid_x, grid_y
+
+
+
+
             pass
         
             # TODO: Extraire la direction de déplacement à partir de l'attribut `self.direction`.

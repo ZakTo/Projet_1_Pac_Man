@@ -80,7 +80,7 @@ def create_coins(board):
     # TODO: Retirer les coins aux positions centrales, en utilisant la variable 'center_pos'.
 
     return coins
-create_coins(1)
+
 def create_special_coins(board):
     special_coins = []
     special_coins = special_coins_pos.copy()

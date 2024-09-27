@@ -29,6 +29,14 @@ class Ghost:
     def move(self):
         # Si le fantôme n'est pas "mort", commencez le calcul de sa prochaine position
         if not self.dead:
+            next_x = self.pos[0] + self.direction[0] * self.speed
+            next_y = self.pos[0] + self.direction[0] * self.speed
+
+            next_rect = pygame.Rect(next_x, next_y, GHOST_SIZE[0], GHOST_SIZE[1])
+
+
+
+
             pass
             # TODO: Calculer la prochaine position en fonction de la direction et de la vitesse
             # Utilisez `self.direction` pour déterminer la direction et `self.speed` pour le déplacement.
